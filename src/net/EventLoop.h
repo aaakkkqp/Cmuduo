@@ -15,8 +15,7 @@ public:
 //  基础功能：循环监听事件以及退出事件
     void loop();
     void quit();
-    std::atomic_bool isloop; // true = 正在循环
-
+    std::atomic<bool> isloop; // true = 正在循环 atomic 线程安全
     
 };
 

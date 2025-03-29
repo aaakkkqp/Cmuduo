@@ -4,5 +4,4 @@
 void EventLoop::loop(){
     isloop = true;
 
-    
 }
