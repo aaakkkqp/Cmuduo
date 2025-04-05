@@ -15,7 +15,10 @@ void ThreadPool::start(){
     running = true;
     pool.reserve(size); // 扩容，避免vector的动态扩容(会随着大量的析构与重新分配)
     for(int i = 0; i < pool.size(); i++){
-        pool.emplace_back(new Thread(std::bind(&ThreadPool::work, this), name + std::to_string(i)));
+        pool.emplace_back(
+            new Thread([this]() 
+                    {this->work();})
+        );
         // 绑定...
         pool[i]->start(); // 开始
     }

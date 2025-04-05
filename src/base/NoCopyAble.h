@@ -1,5 +1,5 @@
 #ifndef NOCOPYABLE_H
-#define NOCOPYABEL_H
+#define NOCOPYABLE_H
 
 /*
 禁止拷贝的类

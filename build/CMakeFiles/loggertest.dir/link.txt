@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/loggertest.dir/src/logger/test.cpp.o -o loggertest 
